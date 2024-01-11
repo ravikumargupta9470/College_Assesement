@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto</title>
+</head>
+<body align="center">
+    <h1>ceaser cipher code </h1>
+    <form action="">
+
+<input type="text" id="code"  placeholder="Enter Code here"/>
+<input type="text" id="key" placeholder="Enter key here" />
+<button name="submit" onclick="ab();">submit</button>
+
+
+    </form>
+
+
+    <script type="text/javascript">
+
+
+var data=new Array(30);
+var data2=[];
+function ab()
+{
+data=document.getElementById('code').value;
+var key=parseInt(document.getElementById('key').value);
+
+var i,ch,ch2;
+for(i=0;i<data.length;i++)
+{
+    ch=data.charCodeAt(i);
+
+    
+if(ch>=65&&ch<=90)
+{
+     data2[i]=String.fromCharCode(((ch+key-65)%26+65));
+}
+else if(ch>=97&&ch<=122)
+{
+   data2[i]=String.fromCharCode(((ch+key-97)%26+97));
+}
+
+
+
+}
+
+
+
+    alert("your ceaser cipher code is "+data2);
+
+
+
+
+
+}
+
+
+    </script>
+    
+</body>
+</html>
